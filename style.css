@@ -27,16 +27,16 @@ nav {
   margin-right: 10px;
 }
 
-.nav-links {
+.navlinks {
   display: flex;
 }
 
-.nav-links li {
+.navlinks li {
   list-style: none;
   margin-left: 20px;
 }
 
-.nav-links li a {
+.navlinks li a {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
@@ -46,7 +46,7 @@ nav {
   padding: 10px;
 }
 
-.nav-links li a:hover {
+.navlinks li a:hover {
   background-color: #fff;
   color: #333;
 }
@@ -67,7 +67,7 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .nav-links {
+  .navlinks {
     position: fixed;
     top: 80px;
     left: 0;
@@ -77,13 +77,13 @@ nav {
     background-color: #fff;
     transition: all 0.3s ease;
   }
-  .nav-links.show{
+  .navlinks.show{
     height: calc(100vh - 80px);
   }
-  .nav-links li {
+  .navlinks li {
     margin: 10px 0;
   }
-  .nav-links a{
+  .navlinks a{
     color: #333;
     font-size: 20px;
 
