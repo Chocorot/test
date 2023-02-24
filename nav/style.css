@@ -1,147 +1,42 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .logo {
-    font-size: 1.5rem;
-  }
-  
-  nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  nav li {
-    list-style: none;
-    margin: 10px 0;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  nav a:hover {
-    color: #fdb813;
-  }
-  
-  .burger {
-    display: none;
-    cursor: pointer;
-  }
-  
-  .burger div {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  @media screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-    }
-    
-    .nav-links {
-      position: absolute;
-      right: 0px;
-      height: 92vh;
-      top: 8vh;
-      background-color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-      transform: translateX(100%);
-      transition: transform 0.5s ease-in-out;
-    }
-    
-    .nav-links li {
-      opacity: 0;
-    }
-    
-    .burger {
-      display: block;
-    }
-  }
-  
-  .nav-active {
-    transform: translateX(0%);
-  }
-  
-  .nav-links li {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    font-size: 1.5rem;
-  }
-  
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
-  
-  .toggle .line2 {
-    opacity: 0;
-  }
-  
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 999;
+    height: 80px;
+    background-color: #fff;
+    z-index: 9999;
   }
   
-  nav ul {
+  nav {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
-  }
-  
-  nav ul li {
-    list-style: none;
-  }
-  
-  nav ul li a {
-    text-decoration: none;
-    color: #444;
-    font-weight: bold;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 50px;
   }
   
   .logo img {
-    height: 60px;
+    height: 50px;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
   }
   
   .burger {
@@ -158,18 +53,24 @@ header {
   }
   
   @media screen and (max-width: 768px) {
-    body {
-      overflow-x: hidden;
-    }
-    nav ul {
-      width: 100%;
+    .nav-links {
+      position: fixed;
+      right: 0;
+      top: 80px;
+      height: calc(100vh - 80px);
+      background-color: #fff;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
+      width: 100%;
+      transform: translateX(100%);
+      transition: all 0.3s ease;
     }
-    nav ul li {
-      margin-top: 20px;
+  
+    .nav-links li {
+      opacity: 0;
     }
+  
     .burger {
       display: block;
     }
@@ -179,46 +80,15 @@ header {
     transform: translateX(0%);
   }
   
-  @media screen and (max-width: 768px) {
-    .nav-links {
-      position: fixed;
-      height: 100vh;
-      width: 50%;
-      top: 0;
-      right: 0;
-      background-color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.5s ease-in-out;
-      z-index: 999;
-    }
-    .nav-links li {
-      opacity: 0;
-    }
-    .nav-links li a {
-      font-size: 24px;
-      color: #444;
-      font-weight: bold;
-      margin: 20px;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    .burger div {
-      background-color: #333;
-    }
-  }
-  
-  .toggle .line1 {
+  .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
   }
   
-  .toggle .line2 {
+  .line2 {
     opacity: 0;
   }
   
-  .toggle .line3 {
+  .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-    
+  
