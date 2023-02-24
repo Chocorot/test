@@ -76,3 +76,6 @@ nav {
     display: flex;
     flex-direction: column;
 }
+ul.active {
+    left: 0;
+}
