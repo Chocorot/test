@@ -70,21 +70,35 @@
       top: 0.75em;
       right: 1em;
     }
-  }
   
-  .nav-active {
-    left: 0;
-  }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
   
-  .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
-  }
+    .nav-links a {
+      font-size: 1.5em;
+      text-align: center;
+      padding: 1em;
+    }
   
-  .toggle .line2 {
-    opacity: 0;
-  }
+    .nav-active {
+      left: 0;
+    }
   
-  .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    .burger .line1 {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .burger .line2 {
+      opacity: 0;
+    }
+  
+    .burger .line3 {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
   }
   
