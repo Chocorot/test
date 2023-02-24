@@ -1,69 +1,90 @@
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #f8f8f8;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 999;
-  }
-  
-  .logo a {
-    font-size: 24px;
-    font-weight: bold;
-    text-decoration: none;
-    color: #333;
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
   
-  .menu li {
-    margin: 0 10px;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
   }
   
-  .menu li a {
+  .logo {
+    font-size: 1.5em;
+    margin-left: 1em;
+  }
+  
+  .nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+  }
+  
+  .nav-links li {
+    list-style: none;
+  }
+  
+  .nav-links a {
+    color: white;
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
-    font-weight: bold;
-    text-transform: uppercase;
+    font-size: 1.2em;
   }
   
-  .toggle {
-    cursor: pointer;
+  .burger {
     display: none;
+    cursor: pointer;
   }
   
-  @media (max-width: 768px) {
-    .menu {
-      display: none;
+  .burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: flex;
       flex-direction: column;
-      align-items: center;
       width: 100%;
+      height: 100vh;
       position: absolute;
-      top: 70px;
-      left: 0;
-      padding: 10px 0;
-      background-color: #f8f8f8;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      top: 80px;
+      left: -100%;
+      transition: all 0.5s ease;
     }
-  
-    .menu li {
-      margin: 10px 0;
+    
+    .nav-links li {
+      margin-right: 2em;
     }
-  
-    .toggle {
+    
+    .burger {
       display: block;
-      font-size: 24px;
+      position: absolute;
+      top: 0.75em;
+      right: 1em;
     }
+  }
+  
+  .nav-active {
+    left: 0;
+  }
+  
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .toggle .line2 {
+    opacity: 0;
+  }
+  
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
   
