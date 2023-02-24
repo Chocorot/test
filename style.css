@@ -9,12 +9,6 @@ body {
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
 }
 
 .logo {
@@ -63,15 +57,6 @@ nav {
     background-color: #fff;
 }
 
-@media screen and (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .burger {
-        display: block;
-    }
-}
-
 .active {
     display: flex;
     flex-direction: column;
@@ -92,18 +77,11 @@ header {
   
   nav {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 80px;
-    padding: 0 20px;
-  }
-  
-  .logo {
-    height: 50px;
-  }
-  
-  .logo img {
-    height: 100%;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
   }
   
   .menu-toggle {
@@ -172,7 +150,8 @@ header {
       height: calc(100vh - 80px);
     }
     .menu li {
-      margin: 10px 0;
+      list-style: none;
+      margin-left: 20px;
     }
     .menu a {
       color: #333;
