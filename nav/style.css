@@ -1,80 +1,69 @@
-.navbar {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
   
-  .navbar-nav {
+  .logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .menu {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
   }
   
-  .navbar-nav li {
+  .menu li {
     margin: 0 10px;
   }
   
-  .navbar-nav li a {
-    color: white;
+  .menu li a {
     text-decoration: none;
+    color: #333;
+    font-size: 18px;
     font-weight: bold;
-    font-size: 16px;
+    text-transform: uppercase;
   }
   
-  .navbar-toggle {
+  .toggle {
     cursor: pointer;
-  }
-  
-  .bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 5px 0;
-    transition: transform 0.3s, opacity 0.3s;
-  }
-  
-  .navbar-toggle.active .bar:nth-of-type(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .navbar-toggle.active .bar:nth-of-type(2) {
-    opacity: 0;
-  }
-  
-  .navbar-toggle.active .bar:nth-of-type(3) {
-    transform: translateY(-8px) rotate(-45deg);
+    display: none;
   }
   
   @media (max-width: 768px) {
-    .navbar-nav {
+    .menu {
       display: none;
-      position: absolute;
-      top: 60px;
-      left: 0;
-      width: 100%;
-      background-color: #333;
-      padding: 10px 0;
-      text-align: center;
-    }
-    
-    .navbar-nav.active {
-      display: flex;
       flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      padding: 10px 0;
+      background-color: #f8f8f8;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
     }
-    
-    .navbar-nav li {
+  
+    .menu li {
       margin: 10px 0;
     }
-    
-    .navbar-toggle {
+  
+    .toggle {
       display: block;
+      font-size: 24px;
     }
   }
   
